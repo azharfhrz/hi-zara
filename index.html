@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="header_text">Zara, would you be mine? please?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://i.giphy.com/5mt6xWPNMj5ZhNu5PV.webp">
+            </div>
+            <div class="buttons">
+                <button class="btn" id="yesButton" onclick="yesPage()">Yes</button>
+                <button
+                    class="btn"
+                    id="noButton"
+                    onmouseover="moveButton()"
+                    onclick="moveButton()"
+                >No</button>
+            </div>
+            <script type="text/javascript">
+				function yesPage() {
+					window.location.href = "yes.html"
+				}
+
+				function moveButton() {
+					var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+					var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+					document.getElementById('noButton').style.left = `${x}px`;
+					document.getElementById('noButton').style.top = `${y}px`;
+				}
+            </script>
+        </div>
+    </body>
+</html>
